@@ -1,0 +1,51 @@
+body *{
+  /* every element within i.e. body*/
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: x-large;
+  /*em - relational to the size of an m */
+  text-align: center;
+}
+
+h2 {
+  font-size: larger;
+}
+
+h3 {
+  font-size: large;
+}
+
+img {
+  width: 60%;
+}
+
+header {
+  font-family: cursive;
+  color: black;
+  background-color: peachpuff;
+  border: 5px black;
+  border-style: double;
+  margin: 5%;
+  padding: 10px;
+  }
+
+section {
+  border: 3px solid black;
+  margin: 30px 5px;
+  padding: 10px;
+}
+
+#pwelcome {
+  width: 80%;
+  color: black;
+  margin: 25%;
+  padding: 10px 25px 10px 25px;
+  text-align: center;  
+}
+
+ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
