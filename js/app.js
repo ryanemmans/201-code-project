@@ -83,3 +83,53 @@ case 3:
 default:
   alert('Let\'s get together and plan a trip so you can learn to work the slope!');
 }
+
+// let's pretend I'm making a list of my favorite movies and I am going to let the user guess one of them. I will give them 5 guesses. If they get it right. Let them know! alert with 'you got it right' and have them stop guessing. If wrong, give feedback, let them know they got it wrong and how many guesses they have left. If on the last guess and still wrong, tell them the correct answers.
+
+// array of movies
+const movieArray = ['goonies', 'usual suspects', 'moana', 'sound of music', 'empire of the sun'];
+
+// prompt user for guess
+// wrap in a while loop
+// checking for correct guess, looping through a loop, best for while loop, to check 2 conditions, # of guesses and correct answer
+// inner loop is a for loop
+
+// establish a count for my guesses
+let guesses  = 6;
+// never go below 1
+// set up a flag to indicate if they got the correct answer
+let correctMovie = false;
+
+// while (correctMovie === && guesses > 0){ }
+
+while (!correctMovie && guesses > 0) {
+// gets me started into the loop with my present values
+// prompt user for guess
+  let userGuess = prompt('Can you guess one of my favorite movies? You have a total of ' + guesses + ' attempts remaining.');
+  let userGuessLower = userGuess.toLowerCase();
+  // check if user guess matches ANY of the movies
+  for (let i = 0; i < movieArray.length; i++) {
+    // check if userGuess matches each single movie
+    if (userGuessLower === movieArray[i]) {
+      alert('You got one correct! Amazing job!');
+      correctMovie = true;
+      break;
+    }
+  }
+  if (correctMovie) {
+    alert('Nice work! All of the correct choices were ' + movieArray);
+  }
+  // else {
+  //  alert('Sorry you didn\'t quite hit the mark, please guess againm')
+  // }
+  // if they got it wrong, and are on guess #5-#2, we'll tell them to try again.
+  if (!correctMovie && guesses <= 6 && guesses >1) {
+    alert('Sorry, you\'re incorrect, please guess again.');
+  }
+  // If they are wrong on last guess, then we will tell them the answers
+  if (!correctMovie && guesses === 1) {
+    alert('Sorry, you are incorrect. Possible options were ' + movieArray);
+  }
+  guesses--;
+  // this is to break the loop by decrementing the loop
+}
