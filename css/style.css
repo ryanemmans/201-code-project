@@ -17,8 +17,12 @@ h3 {
   font-size: large;
 }
 
-img {
-  width: 60%;
+#keystone1 {
+  display: block;
+  width: 70%;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
@@ -27,22 +31,30 @@ header {
   background-color: peachpuff;
   border: 5px black;
   border-style: double;
-  margin: 5%;
+  margin: 20px;
   padding: 10px;
   }
 
 section {
+  display: b;
+  max-width: 90%;
   border: 3px solid black;
-  margin: 30px 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
+  background-color: peachpuff;
+  color: black;
 }
 
 #pwelcome {
   width: 80%;
   color: black;
-  margin: 25%;
-  padding: 10px 25px 10px 25px;
-  text-align: center;  
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: justify;
 }
 
 ol {
