@@ -36,20 +36,20 @@ header {
   }
 
 section {
-  display: b;
+  display: block;
   max-width: 90%;
   border: 3px solid black;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 5px;
   background-color: peachpuff;
   color: black;
 }
 
 #pwelcome {
-  width: 80%;
+  width: 90%;
   color: black;
   margin-left: auto;
   margin-right: auto;
@@ -60,4 +60,10 @@ section {
 ol {
   list-style: decimal;
   list-style-position: inside;
+}
+
+ul {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
