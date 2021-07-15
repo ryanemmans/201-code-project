@@ -125,6 +125,9 @@ console.log(userName + '\'s answer to question five was ' + thinkJordan);
 //   break;
 // }
 
+
+// QUESTION 6
+
 let correctNumberAnswer = 7;
 let numberGuesses = 4;
 // let userNumberGuess = prompt('Are you able to guess what my favorite number is? Hint, it is between 1 and 10.');
