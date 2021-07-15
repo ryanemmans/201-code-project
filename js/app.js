@@ -156,31 +156,58 @@ while (!correctFruit && guesses > 0) {
 
 // -----------------------------------------------------------------------------------------------------------
 
-// Guess a number between 1 and 10
-let correctNumberAnswer = 7;
-let count = 4;
-let userNumberGuess = prompt('Are you able to guess what my favorite number is? Hint, it is between 1 and 10.');
-let intUserNumber = parseInt(userNumberGuess);
-console.log('User Guess: ' + intUserNumber);
-while (userNumberGuess <= 0 || userNumberGuess > 10) {
-  userNumberGuess = prompt('The number is between 1 and 10!');
-}
+// The below code is where I started, the code that follows, is where I ended up.
 
-while (userNumberGuess !== correctNumberAnswer) {
-  if (userNumberGuess < correctNumberAnswer) {
-    alert('Maybe think of a higher number!');
+// Guess a number between 1 and 10
+// let correctNumberAnswer = 7;
+// let count = 4;
+// let userNumberGuess = prompt('Are you able to guess what my favorite number is? Hint, it is between 1 and 10.');
+// let intUserNumber = parseInt(userNumberGuess);
+// console.log('User Guess: ' + intUserNumber);
+// while (userNumberGuess <= 0 || userNumberGuess > 10) {
+//   userNumberGuess = prompt('The number is between 1 and 10!');
+// }
+
+// while (userNumberGuess !== correctNumberAnswer) {
+//   if (userNumberGuess < correctNumberAnswer) {
+//     alert('Maybe think of a higher number!');
+//   }
+//   if (userNumberGuess > correctNumberAnswer) {
+//     alert('Maybe think of a lower number..');
+//   }
+//   if (intUserNumber === correctNumberAnswer) {
+//     alert('You got it!');
+//     break;
+//   }
+//   count--;
+//   if (count > 0)
+//     alert('Too bad, the answer was 7! The perfect number!');
+//   break;
+// }
+
+let correctNumberAnswer = 7;
+let numberGuesses = 4;
+// let userNumberGuess = prompt('Are you able to guess what my favorite number is? Hint, it is between 1 and 10.');
+// let intUserNumber = parseInt(userNumberGuess);
+// console.log('User Guess: ' + intUserNumber);
+for (let i = 0; i < numberGuesses; i++) {
+  console.log(i);
+  let userAnswer = prompt('Are you able to guess what my favorite number is? Hint, it is between 1 and 10. This is guess ' + (i + 1) + ' of 4 guesses');
+  while (userAnswer <= 0 || userAnswer > 10) {
+    userAnswer = prompt('My favorite number is between 1 and 10!');
+    console.log('User guess: ' + userAnswer);
   }
-  if (userNumberGuess > correctNumberAnswer) {
-    alert('Maybe think of a lower number..');
-  }
-  if (intUserNumber === correctNumberAnswer) {
-    alert('You got it!');
+
+  if (userAnswer == correctNumberAnswer) {
+    alert('Bam! You are almost, like me! As in essence, like me! Good job!');
     break;
+  } else if (userAnswer < correctNumberAnswer) {
+    alert('Incorrect, think higher, taller, reach for the sky..');
+  } else if (userAnswer > correctNumberAnswer) {
+    alert(':( sorry, the number isn\'t that special. Think lower, shorter, but not the basement.');
+  } else {
+    alert('It would be nice if someone..' + userName + ' could follow sinple direction. Enter a number between 1 and 10 this time');
   }
-  count--;
-  if (count > 0)
-    alert('Too bad, the answer was 7! The perfect number!');
-  break;
 }
 
 // return;
@@ -196,4 +223,3 @@ while (userNumberGuess !== correctNumberAnswer) {
 // once couint is at 0, we are out of guesses, tell them what the right answer is, then break
 // add alert that says
 // look at how a while loop works
-// while
