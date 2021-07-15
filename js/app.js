@@ -10,7 +10,7 @@
 // ask a question
 
 let userName = prompt('Welcome to THE About Me Guessing Game! My name is Christopher. Could you please help me with your name so we can get things started?');
-console.log(userName);
+console.log('The user\'s name is ' + userName);
 alert('Welcome ' + userName);
 
 alert('Let\'s answer some questions with yes/no or y/n answers. You can do this!');
@@ -20,7 +20,7 @@ alert('Let\'s answer some questions with yes/no or y/n answers. You can do this!
 // ------------------------------------------------------------------------------------------
 
 let quesOne = prompt('Alright ' + userName + ', let\'s get this exciting game started! Remember, please answer all of the following questions with a simple yes/no or y/n. Question 1: Do you think I have ever been snowboarding?');
-console.log(quesOne);
+// console.log(userName + '\'s answer to question one was ' + quesOne);
 let snowBoard = quesOne.toLowerCase();
 // we try to not change thge users original input
 // if the person says yes, I want to congratulate them, if they say no, I will say sorry for your loss, if they say anything else, I'll say, I didn't understand, hope you get to go soon
@@ -30,13 +30,14 @@ if (snowBoard === 'yes' || snowBoard === 'y') {
   alert('Oh. My. Gosh. ' + userName + ' I guess I didn\'t make myself clear in my intro at the beginning of class. Snowboarding is pure serenity.');
 } else {
   alert('W..wh..wha..what? Maybe next time I\'ll need to reword my instructions for you. Do not pass Go. Do not collect $200 :P');
+  alert(userName + ' I have been snowarding 14 times! So...yes!');
 }
-console.log(snowBoard);
+console.log(userName + '\'s answer to question one was ' + snowBoard);
 
 // --------------------------------------------------------------------------------------------
 
 let quesTwo = prompt(userName + ', we all start at one point or another. But let me ask you this: Question 2: If given the opportuinty to try snowboarding, would you take the offer?');
-console.log(quesTwo);
+// console.log(userName + '\'s answer to question two was ' + quesTwo);
 let snowGo = quesTwo.toLowerCase();
 if (snowGo === 'yes' || snowGo === 'y') {
   alert('Ding ding ding! We have a winner! I like your mentality ' + userName + '! ');
@@ -44,13 +45,14 @@ if (snowGo === 'yes' || snowGo === 'y') {
   alert('Oh. My. Gosh. We gotta get you out on the slopes! It\'s pure serenity. Anyways, let\'s move forward..');
 } else {
   alert('Seriously ' + userName + '!? Again!? Please answer with a simple yes or no. Do not pass Go. Do not collect $200 :P');
+  alert('You should definitely try snowboarding ' + userName + '!');
 }
-console.log(snowGo);
+console.log(userName + '\'s answer to question two was ' + snowGo);
 
 // --------------------------------------------------------------------------------------------
 
 let quesThree = prompt('Now ' + userName + ', time for Question 3. To get a good grasp of who I am, is the movie Johnny Tsunami the reason I fell in love with snowbaording?');
-console.log(quesThree);
+// console.log(userName + '\'s answer to question three was ' + quesThree);
 let jTsunami = quesThree.toLowerCase();
 if (jTsunami === 'yes' || jTsunami === 'y') {
   alert(userName + ', you are borderline genius! YES! I love Johnny Tsunami and that movie is the exact reason I fell in love with snowbaording.');
@@ -58,13 +60,14 @@ if (jTsunami === 'yes' || jTsunami === 'y') {
   alert('Welp ' + userName + '.. I thought we were getting to know one another better, but it appears not. I LOVE the movie Johnny Tsunami! Gotta work the hill baby!');
 } else {
   alert('We\'ve been through this before.. Do not pass Go. Do not collect $200 :P');
+  alert(userName + ', you gotta work the hill baby! Johnny Tsunami is the exact reason I fell in love with snowboarding!');
 }
-console.log(jTsunami);
+console.log(userName + '\'s answer to question three was ' + jTsunami);
 
 // --------------------------------------------------------------------------------------------
 
 let quesFour = prompt(userName + ', we all have different hobbies in life but I highly encourage you to try out snowboarding! Now, let\'s change gears and see if you can guess another aspect of my life. Question 4: From what you have gathered in our time together, do you think that I have traveled to the country of Germany?');
-console.log(quesFour);
+// console.log(userName + '\'s answer to question four was ' + quesFour);
 let toGerm = quesFour.toLowerCase();
 if (toGerm === 'yes' || toGerm === 'y') {
   alert('Ba-da-boom ba-ba-ding! ' + userName + ', Germany is an amazing place and you should go at least once in your lifetime. Good job!');
@@ -72,13 +75,14 @@ if (toGerm === 'yes' || toGerm === 'y') {
   alert('Snowboarding, international travel and exploring our own backyard. I\'ve said these words at least 3 times in our short time together. C\'mon ' + userName + '!');
 } else {
   alert('Seriously ' + userName + '!? Again!? Please answer with a simple yes or no or even y or n. Do not pass Go. Do not collect $200 :P');
+  alert(userName + ' Germany is AMAZING! Especial Schwangau!');
 }
-console.log(toGerm);
+console.log(userName + '\'s answer to question four was ' + toGerm);
 
 // --------------------------------------------------------------------------------------------
 
 let quesFive = prompt(userName + ', time for some thought and history! Question 5: Do you, ' + userName + ', think that I want to travel to the historical country of Jordan?');
-console.log(quesFive);
+// console.log(userName + '\'s answer to question five was ' + quesFive);
 let thinkJordan = quesFive.toLowerCase();
 if (thinkJordan === 'yes' || thinkJordan === 'y') {
   alert('Absofreakinglutely! I implore you ' + userName + ' to search up the ancient city of Petra and you\'ll see exactly why I want to travel there! Plus, for a ME country, it\'s relatively safe for everyone.');
@@ -86,8 +90,9 @@ if (thinkJordan === 'yes' || thinkJordan === 'y') {
   alert('Ye of little faith. ' + userName + ', I highly suggest you to search up the ancient city of Petra and you\'ll see exactly why I want to travel there! Plus, Jordan is relatively safe for where it\'s at in the world.');
 } else {
   alert('Seriously ' + userName + '!? Again!? Please answer with a simple yes or no. Do not pass Go. Do not collect $200 :P');
+  alert(userName + ' search up the city of Petra in Jordan and you\'ll see why the answer is yes!');
 }
-console.log(thinkJordan);
+console.log(userName + '\'s answer to question five was ' + thinkJordan);
 
 // ----------------------------------------------------------------------------------------------------------------
 
@@ -126,12 +131,17 @@ let numberGuesses = 4;
 // let intUserNumber = parseInt(userNumberGuess);
 // console.log('User Guess: ' + intUserNumber);
 for (let i = 0; i < numberGuesses; i++) {
-  console.log(i);
+  // console.log(i);
   let userAnswer = prompt('Are you able to guess what my favorite number is? Hint, it is between 1 and 10. This is guess ' + (i + 1) + ' of 4 guesses');
   while (userAnswer <= 0 || userAnswer > 10) {
+    // userAnswer = prompt('My favorite number is between 1 and 10!');
+    alert('This time, answer a numerical number between 1 and 10.');
     userAnswer = prompt('My favorite number is between 1 and 10!');
-    console.log('User guess: ' + userAnswer);
+    // having an issue if they enter a number greater than 10 or less than 0, it alerts them, but doesn't go back to the original prompt. It kinda works, but not exactly as it should.
   }
+  console.log('User guess: ' + userAnswer);
+
+  // how can I add an alert after the maximum number of guesses has been reached and they did not get it right? Need to alert them what the correct answer was and move on.
 
   if (userAnswer == correctNumberAnswer) {
     alert('Bam! You are almost, like me! As in essence, like me! Good job!');
@@ -142,6 +152,10 @@ for (let i = 0; i < numberGuesses; i++) {
     alert(':( sorry, the number isn\'t that special. Think lower, shorter, but not the basement.');
   } else {
     alert('It would be nice if someone..' + userName + ' could follow sinple direction. Enter a number between 1 and 10 this time');
+  }
+
+  if (!correctNumberAnswer && guesses === 1) {
+    alert('Sorry, you are incorrect. My favorite fruit options were ' + fruitArray);
   }
 }
 
@@ -185,6 +199,7 @@ case 3:
 default:
   alert('We seriously need to teach some basic command responses. Maybe next time, you\'ll enter a number between 1 and 3, like the number 2. Now, time for even more guessing! ROFL!');
 }
+console.log(userName + ' thought gave this game a rating of ' + funLevelNumber);
 
 // --------------------------------------------------------------------------------------------------------------------------
 
@@ -220,6 +235,7 @@ while (!correctFruit && guesses > 0) {
       break;
     }
   }
+  console.log('User guessed: ' + userGuess);
   if (correctFruit) {
     alert('Nice work! All of my favorite fruit choices are ' + fruitArray);
   }
@@ -232,11 +248,11 @@ while (!correctFruit && guesses > 0) {
   }
   // If they are wrong on last guess, then we will tell them the answers
   if (!correctFruit && guesses === 1) {
-    alert('Sorry, you are incorrect. All of my favorite fruits are ' + fruitArray);
+    alert('Sorry, you are incorrect. My favorite fruit options were ' + fruitArray);
   }
   guesses--;
   // this is to break the loop by decrementing the loop
 }
+console.log('Correct ptions were: ' + fruitArray);
 
 // -----------------------------------------------------------------------------------------------------------
-
